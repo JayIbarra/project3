@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  /* transition: all 0.2s ease; */ /* ease is between ease-out and ease-in-out */
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5; /* default mozila line-height is 1.435 */
+  color: #303030; /* rgba(48,48,48,1); */
+}
+
+body {
+  /* body overwrite html */
+  margin: 0px;
+  padding: 0px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+
+/**/
+
+p {
+  margin: 0.5em 0px;
+}
+
+h1 {
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+h2 {
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+h3 {
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+h4 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+h5 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.indent {
+  padding-left: 3em; /* 3em je sirine kao nnnnn */
+}
+
+/* -----Bootstrap 4 spinner https://getbootstrap.com/docs/4.2/components/spinners/ */
+
+.spinner-border {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: text-bottom;
+  border: 6px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+}
+.spinner-border-sm {
+  width: 18px;
+  height: 18px;
+  border-width: 4px;
+}
+@keyframes spinner-border {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: seagreen;
+  color: white;
+  font-size: 2rem;
+}
+header .menu-icon {
+  display: inline-block;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+header .logo {
+  display: inline-block;
+  margin-left: 2rem;
+  font-weight: 900;
+}
+
+/* DRAWER */
+.drawer {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  min-height: 100vh;
+  max-width: 0px;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  flex: 1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+}
+.drawer-opened .drawer {
+  max-width: 80%;
+}
+.drawer .drawer-close {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  color: black;
+  text-align: center;
+  line-height: 1.85rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.drawer .drawer-close:hover {
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+.drawer .pad {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.drawer nav {
+}
+.drawer nav .option {
+  text-transform: uppercase;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0.5rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0.125rem;
+  padding-right: 0.5rem;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.drawer nav .option:hover,
+.drawer nav .option.active {
+  background-color: seagreen;
+  padding-left: 0.5rem;
+  padding-right: 0.125rem;
+}
